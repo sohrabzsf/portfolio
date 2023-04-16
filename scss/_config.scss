@@ -1,0 +1,36 @@
+$primary-color: #00db92;
+$secondary-color: #008558;
+$content-color: #dfede8;
+$base-color: #1e2120;
+$neutral-color: #151716;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Niramit, system-ui, -apple-system, sans-serif;
+  background-color: $base-color;
+  color: $content-color;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: $content-color;
+  }
+}
+
+li {
+  list-style-type: none;
+}

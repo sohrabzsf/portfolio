@@ -1,0 +1,81 @@
+@use "./config" as *;
+
+.navbar {
+  background-color: $neutral-color;
+  width: 7rem;
+  height: 100vh;
+  padding: 2.5rem 0.5rem;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 6rem;
+  height: 6rem;
+}
+
+.nav-logo-text {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.menu-links-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  li {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.menu-link {
+  position: relative;
+
+  img {
+    width: 3.8rem;
+    height: 3.8rem;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+  }
+
+  p {
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 4rem;
+    color: $primary-color;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+
+  &:hover {
+    img {
+      opacity: 0;
+    }
+
+    p {
+      opacity: 1;
+    }
+  }
+}
+
+.media-links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.media-link {
+  img {
+    width: 2.4rem;
+  }
+}

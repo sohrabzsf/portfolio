@@ -1,0 +1,11 @@
+@use "./config";
+@use "./navbar";
+
+#root {
+  display: flex;
+}
+
+#main {
+  flex-grow: 1;
+  align-self: center;
+}
