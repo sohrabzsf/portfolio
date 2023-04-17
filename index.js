@@ -33,7 +33,7 @@ async function handleLocation() {
     letters.forEach((letter) => {
       letter.classList.replace("text-animate", "text-animate-hover");
     });
-  }, 4500);
+  }, 4000);
 }
 
 window.onpopstate = handleLocation;

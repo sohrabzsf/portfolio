@@ -1,0 +1,47 @@
+@use "sass:math";
+@use "./config" as *;
+
+.about-p-container {
+  width: 40vw;
+  font-size: 2.2rem;
+  margin-top: 3rem;
+
+  p {
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+    animation-delay: 2s;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{math.div($i, 2) + 1.5}s;
+      }
+    }
+
+    strong {
+      color: $primary-color;
+    }
+  }
+}
+
+.techs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 6rem;
+}
+
+.tech-icon {
+  width: 12rem;
+  height: 12rem;
+  opacity: 0;
+  animation: jackInTheBox 1s forwards;
+  animation-delay: 2s;
+
+  @for $i from 1 through 7 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{math.div($i, 2) + 1.5}s;
+    }
+  }
+}

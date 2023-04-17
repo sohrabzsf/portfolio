@@ -1,6 +1,8 @@
-@use "./config";
+@use "sass:math";
+@use "./config" as *;
 @use "./navbar";
 @use "./home";
+@use "./about";
 
 #root {
   display: flex;
@@ -11,4 +13,44 @@
   align-self: center;
   height: 100%;
   margin: 7rem 14rem;
+}
+
+.page-container {
+  position: relative;
+  display: flex;
+  gap: 14rem;
+  animation: fadeIn 1s;
+}
+
+.loader {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  animation: fadeOut 1s forwards;
+  animation-delay: 1s;
+}
+
+.text-animate {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1s ease-out forwards;
+  animation-delay: 1s;
+
+  @for $i from 11 through 36 {
+    &.delay-#{$i} {
+      animation-delay: #{math.div($i, 10)}s;
+    }
+  }
+}
+
+.text-animate-hover {
+  display: inline-block;
+
+  &:hover {
+    color: $primary-color;
+    animation: rubberBand 1s;
+  }
 }
