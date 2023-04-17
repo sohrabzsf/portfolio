@@ -1,0 +1,51 @@
+@use "./config" as *;
+@use "sass:math";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  animation: fadeIn 1s;
+}
+
+h1 {
+  font-size: 7rem;
+  color: $content-color;
+}
+
+.image-animate {
+  width: 4rem;
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1s ease-out forwards;
+  animation-delay: 1.7s;
+}
+
+.text-animate {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1s ease-out forwards;
+  animation-delay: 1s;
+
+  @for $i from 12 through 37 {
+    &.delay-#{$i} {
+      animation-delay: #{math.div($i, 10)}s;
+    }
+  }
+}
+
+.text-animate-hover {
+  display: inline-block;
+
+  &:hover {
+    color: $primary-color;
+    animation: rubberBand 1s;
+  }
+}
+
+.main-logo {
+  width: 34rem;
+  margin-right: 14rem;
+  opacity: 0;
+  animation: jackInTheBox 1.1s forwards;
+  animation-delay: 1.7s;
+}

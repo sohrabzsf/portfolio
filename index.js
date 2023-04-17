@@ -1,7 +1,6 @@
 import "./scss/style.scss";
 
 // ROUTER IMPLEMENTATION
-
 const navLinks = document.querySelectorAll(".menu-link");
 navLinks.forEach((elem) => elem.addEventListener("click", route));
 
@@ -18,7 +17,7 @@ const routes = {
   "/": "/pages/home.html",
   "/about": "/pages/about.html",
   "/projects": "/pages/projects.html",
-  "/contactme": "/pages/contactme.html",
+  "/contact": "/pages/contact.html",
 };
 
 async function handleLocation() {
@@ -26,6 +25,15 @@ async function handleLocation() {
   const route = routes[path] || routes[404];
   const html = await fetch(route).then((data) => data.text());
   document.getElementById("main").innerHTML = html;
+
+  // Adds the hover effect for letters after some period
+  const letters = document.querySelectorAll(".text-animate");
+
+  setTimeout(() => {
+    letters.forEach((letter) => {
+      letter.classList.replace("text-animate", "text-animate-hover");
+    });
+  }, 4500);
 }
 
 window.onpopstate = handleLocation;

@@ -1,5 +1,6 @@
 @use "./config";
 @use "./navbar";
+@use "./home";
 
 #root {
   display: flex;
@@ -8,4 +9,6 @@
 #main {
   flex-grow: 1;
   align-self: center;
+  height: 100%;
+  margin: 7rem 14rem;
 }
