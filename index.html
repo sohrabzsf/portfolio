@@ -16,31 +16,31 @@
     <div id="root">
       <nav class="navbar">
         <div class="nav-logo-container">
-          <img class="nav-logo" src="images/logo.svg" alt="logo" />
+          <img class="nav-logo" src="images/logo.svg" alt="logo" width="30" />
           <p class="nav-logo-text">Sohrab</p>
         </div>
         <ul class="menu-links-container">
           <li>
             <a href="/" class="menu-link">
-              <img src="images/house.svg" alt="house" />
+              <img src="images/house.svg" alt="house" width="38" />
               <p>HOME</p>
             </a>
           </li>
           <li>
             <a href="/about" class="menu-link">
-              <img src="images/user.svg" alt="user" />
+              <img src="images/user.svg" alt="user" width="38" />
               <p>ABOUT</p>
             </a>
           </li>
           <li>
             <a href="/projects" class="menu-link">
-              <img src="images/briefcase.svg" alt="briefcase" />
+              <img src="images/briefcase.svg" alt="briefcase" width="38" />
               <p>PROJECTS</p>
             </a>
           </li>
           <li>
             <a href="/contact" class="menu-link">
-              <img src="images/envelope.svg" alt="envelope" />
+              <img src="images/envelope.svg" alt="envelope" width="38" />
               <p>CONTACT</p>
             </a>
           </li>
@@ -53,7 +53,7 @@
               target="_blank"
               class="media-link"
             >
-              <img src="images/github.svg" alt="github" />
+              <img src="images/github.svg" alt="github" width="24" />
             </a>
           </li>
           <li>
@@ -63,7 +63,7 @@
               target="_blank"
               class="media-link"
             >
-              <img src="images/linkedin.svg" alt="linkedin" />
+              <img src="images/linkedin.svg" alt="linkedin" width="24" />
             </a>
           </li>
           <li>
@@ -73,7 +73,7 @@
               target="_blank"
               class="media-link"
             >
-              <img src="images/twitter.svg" alt="twitter" />
+              <img src="images/twitter.svg" alt="twitter" width="24" />
             </a>
           </li>
         </ul>
@@ -81,5 +81,14 @@
       <main id="main"></main>
     </div>
     <script type="module" src="/index.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("OPi0n0ukEHX0f62Ir");
+      })();
+    </script>
   </body>
 </html>

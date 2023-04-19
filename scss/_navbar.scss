@@ -1,10 +1,9 @@
 @use "./config" as *;
 
 .navbar {
-  flex-grow: 0;
   background-color: $neutral-color;
   width: 7rem;
-  height: 100vh;
+  height: 100%;
   padding: 2.5rem 0.5rem;
   display: flex;
   flex-direction: column;
@@ -29,7 +28,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 
   li {
     width: 6rem;

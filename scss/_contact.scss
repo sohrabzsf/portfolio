@@ -1,0 +1,98 @@
+@use "sass:math";
+@use "./config" as *;
+
+.contact-text-container {
+  margin: auto;
+  max-width: 45%;
+
+  p {
+    font-size: 2.2rem;
+    margin: 2rem 0;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+    animation-delay: 2s;
+  }
+
+  form {
+    width: 75%;
+
+    div {
+      margin-top: 1.5rem;
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{math.div($i, 2) + 2}s;
+        }
+      }
+
+      &:last-child {
+        text-align: center;
+        margin-top: 3rem;
+      }
+    }
+
+    label {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      margin-left: 1rem;
+      font-size: 1.8rem;
+    }
+
+    input,
+    textarea {
+      display: block;
+      background-color: $content-color;
+      font-size: 2rem;
+      width: 100%;
+      padding: 0.5rem;
+      outline-color: $primary-color;
+      border-radius: 0.3rem;
+    }
+
+    textarea {
+      height: 20rem;
+      resize: none;
+    }
+
+    button {
+      background-color: $base-color;
+      color: $primary-color;
+      cursor: pointer;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      width: 30%;
+      margin: 0 1rem;
+      padding: 1rem;
+      border: 2px solid $primary-color;
+      border-radius: 0.3rem;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $base-color;
+      }
+    }
+  }
+}
+
+.contact-logo-container {
+  margin: auto;
+}
+
+.contact-logo {
+  width: 35rem;
+  margin-right: 7rem;
+  margin-bottom: 20rem;
+  opacity: 0;
+  animation: fadeInBottomLeft 1s forwards;
+  animation-delay: 3s;
+}
+
+@media screen and (max-width: 1600px) {
+  .contact-text-container {
+    form {
+      width: 90%;
+    }
+  }
+}

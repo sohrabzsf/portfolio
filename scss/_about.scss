@@ -1,16 +1,16 @@
 @use "sass:math";
 @use "./config" as *;
 
-.about-p-container {
-  width: 40vw;
-  font-size: 2.2rem;
-  margin-top: 3rem;
+.about-text-container {
+  margin: auto;
+  max-width: 45%;
 
   p {
-    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    margin-top: 2rem;
+    text-align: justify;
     opacity: 0;
     animation: fadeInUp 1s forwards;
-    animation-delay: 2s;
 
     @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
@@ -24,17 +24,19 @@
   }
 }
 
-.techs-container {
+.about-icons-container {
+  margin: auto;
+  max-width: 30%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  gap: 6rem;
+  gap: 5rem;
 }
 
 .tech-icon {
-  width: 12rem;
-  height: 12rem;
+  width: 10rem;
+  height: 10rem;
   opacity: 0;
   animation: jackInTheBox 1s forwards;
   animation-delay: 2s;

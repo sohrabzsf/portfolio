@@ -1,15 +1,20 @@
 @use "./config" as *;
 
+.home-text-container {
+  margin: 0 auto;
+}
+
 .logo-in-text {
   width: 4rem;
 }
 
-.main-logo-container {
-  flex-grow: 1;
-  text-align: center;
+.home-logo-container {
+  margin: auto;
 }
-.main-logo {
-  width: 34rem;
+
+.home-logo {
+  width: 30rem;
+  margin-right: 7rem;
   opacity: 0;
   animation: jackInTheBox 1.2s forwards;
   animation-delay: 1.7s;
