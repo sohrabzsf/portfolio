@@ -19,3 +19,20 @@
   animation: jackInTheBox 1.2s forwards;
   animation-delay: 1.7s;
 }
+
+@media screen and (max-width: 1200px) {
+  .logo-in-text {
+    width: 3rem;
+  }
+
+  .home-logo {
+    width: 20rem;
+    margin-right: 0;
+    margin-top: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .logo-in-text {
+    width: 2.2rem;
+  }
+}

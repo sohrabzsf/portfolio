@@ -79,3 +79,49 @@
     width: 2.4rem;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .navbar {
+    flex-direction: row;
+    height: 7rem;
+    width: 100%;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+  }
+
+  .nav-logo-container {
+    display: none;
+  }
+
+  .menu-links-container {
+    flex-direction: row;
+    gap: 0;
+
+    li {
+      width: 5.5rem;
+      height: 5.5rem;
+    }
+  }
+
+  .menu-link {
+    img {
+      width: 3rem;
+      top: 1.2rem;
+      left: 1.2rem;
+    }
+
+    p {
+      padding-top: 0.5rem;
+    }
+  }
+
+  .media-links-container {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .media-link {
+    img {
+      width: 2.2rem;
+    }
+  }
+}

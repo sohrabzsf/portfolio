@@ -47,3 +47,23 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .about-text-container {
+    max-width: initial;
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  .about-icons-container {
+    max-width: initial;
+    gap: 2.5rem;
+  }
+
+  .tech-icon {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+}
