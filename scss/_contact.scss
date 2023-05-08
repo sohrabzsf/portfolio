@@ -44,9 +44,10 @@
     textarea {
       display: block;
       background-color: $content-color;
+      font-family: inherit;
       font-size: 2rem;
       width: 100%;
-      padding: 0.5rem;
+      padding: 0.4rem 0.8rem 0.8rem 0.8rem;
       outline-color: $primary-color;
       border: none;
       border-radius: 0.5rem;
@@ -62,7 +63,7 @@
       color: $primary-color;
       cursor: pointer;
       font-size: 2rem;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       width: 30%;
       margin: 0 1rem;
       padding: 1rem;
