@@ -27,7 +27,7 @@
   opacity: 0;
   animation: fadeInUp 1s forwards;
 
-  @for $i from 1 through 3 {
+  @for $i from 1 through 10 {
     &:nth-child(#{$i}) {
       animation-delay: #{math.div($i, 2) + 2}s;
     }

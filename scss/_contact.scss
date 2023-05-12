@@ -62,11 +62,12 @@
       background-color: $base-color;
       color: $primary-color;
       cursor: pointer;
+      font-family: inherit;
       font-size: 2rem;
       letter-spacing: 1px;
       width: 30%;
       margin: 0 1rem;
-      padding: 1rem;
+      padding: 1rem 2rem 1.3rem 2rem;
       border: 2px solid $primary-color;
       border-radius: 0.5rem;
 
